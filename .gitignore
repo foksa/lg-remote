@@ -1,4 +1,5 @@
 # Local secrets and per-home state
+config.json
 pairing_key.txt
 sbb_client.txt
 epg.json

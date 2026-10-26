@@ -2,7 +2,7 @@
 """Phone-friendly remote for LG NetCast TVs (UDAP/2.0), e.g. 32LS570S.
 
 Build the web app first (cd web && npm run build), then
-run:  python3 server.py [TV_IP]
+run:  python3 server.py [TV_IP]      (default: tv_ip in config.json)
 and open http://<this-machine>:8765 on your phone.
 """
 import gzip
@@ -15,7 +15,11 @@ import subprocess
 import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-TV_IP = sys.argv[1] if len(sys.argv) > 1 else "192.168.1.60"
+from config import CONFIG
+
+TV_IP = sys.argv[1] if len(sys.argv) > 1 else CONFIG.get("tv_ip")
+if not TV_IP:
+    sys.exit("usage: server.py TV_IP (or set tv_ip in config.json)")
 PORT = 8765
 HERE = os.path.dirname(os.path.abspath(__file__))
 KEY_FILE = os.path.join(HERE, "pairing_key.txt")

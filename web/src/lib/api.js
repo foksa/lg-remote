@@ -52,7 +52,7 @@ const nativeBackend = {
     return parseCurrent(body);
   },
   async guide() {
-    // The guide is built by epg.py on the Pi; the app only needs the Pi for this.
+    // The guide is built by epg.py on the server; the app only needs the server for this.
     for (const url of GUIDE_URLS) {
       const { status, body } = await Tv.fetch({ url });
       if (status === 200 && body) return JSON.parse(body);
@@ -61,7 +61,8 @@ const nativeBackend = {
   },
 };
 
-const GUIDE_URLS = ['http://pi.lan:8765/epg.json', 'http://192.168.1.61:8765/epg.json'];
+// guide_urls from config.json, filled in by vite.config.js at build time.
+const GUIDE_URLS = __GUIDE_URLS__;
 
 function parseCurrent(xml) {
   if (!xml) return {};

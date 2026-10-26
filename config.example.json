@@ -1,0 +1,6 @@
+{
+  "tv_ip": "192.168.1.50",
+  "server": "pi@raspberrypi.local",
+  "guide_urls": ["http://raspberrypi.local:8765/epg.json"],
+  "chromecast": { "name": "Living Room TV", "host": "" }
+}

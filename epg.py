@@ -28,8 +28,10 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
+from config import CONFIG
+
 HERE = os.path.dirname(os.path.abspath(__file__))
-TV_IP = "192.168.1.60"
+TV_IP = CONFIG.get("tv_ip")
 KEY_FILE = os.path.join(HERE, "pairing_key.txt")
 OUT = os.path.join(HERE, "epg.json")
 WINDOW_BEFORE = 3600          # keep the show that started up to an hour ago

@@ -80,7 +80,7 @@
     {#if loading}
       <p class="empty">Loading guide…</p>
     {:else if failed}
-      <p class="empty">Couldn’t load the guide. It comes from the Pi (pi.lan), so check that it’s on.</p>
+      <p class="empty">Couldn’t load the guide. It comes from the server that runs epg.py, so check that it’s on.</p>
     {:else if !listed.length}
       <p class="empty">No channels match “{query}”.</p>
     {/if}

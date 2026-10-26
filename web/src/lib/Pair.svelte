@@ -68,7 +68,7 @@
         {/if}
 
         <form class="manual" onsubmit={useManual}>
-          <input bind:value={manualIp} inputmode="decimal" placeholder="192.168.1.60" autocomplete="off" spellcheck="false">
+          <input bind:value={manualIp} inputmode="decimal" placeholder="192.168.1.x" autocomplete="off" spellcheck="false">
           <button type="submit">Use</button>
         </form>
       </section>
