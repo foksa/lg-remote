@@ -1,0 +1,17 @@
+# Local secrets and per-home state
+pairing_key.txt
+sbb_client.txt
+epg.json
+epg.json.tmp
+tv_channels.json
+
+# Builds
+*.apk
+web/node_modules/
+web/dist/
+
+# Python / misc
+__pycache__/
+.venv/
+*.log
+.DS_Store

@@ -1,0 +1,9 @@
+{
+  "appId": "com.djordje.lgremote",
+  "appName": "LG Remote",
+  "webDir": "dist",
+  "backgroundColor": "#0e0e10",
+  "android": {
+    "backgroundColor": "#0e0e10"
+  }
+}
